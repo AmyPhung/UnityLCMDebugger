@@ -66,12 +66,15 @@ public class LCMListener : MonoBehaviour
         setURL("udpm://239.255.76.67:7667"); // Default LCM URL
 
         StartCoroutine(SimulateRopeLength(3, 4, .01d));
+
     }
 
     class SimpleSubscriber : LCM.LCM.LCMSubscriber
     {
         public void MessageReceived(LCM.LCM.LCM lcm, string channel, LCM.LCM.LCMDataInputStream dins)
         {
+            UnityEngine.Debug.LogError(channel);
+
             if (channel == "MINIROV_ATTITUDE")
             {
                 mwt.mini_rov_attitude_t msg = new mwt.mini_rov_attitude_t(dins);

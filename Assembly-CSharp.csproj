@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ConsoleToGUI.cs" />
     <Compile Include="Assets\LCM\MBARI Types\bounding_box_list_t.cs" />
     <Compile Include="Assets\LCM\MBARI Types\bounding_box_t.cs" />
     <Compile Include="Assets\LCM\MBARI Types\camera_cfg_t.cs" />
